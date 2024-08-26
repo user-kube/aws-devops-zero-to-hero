@@ -2,6 +2,7 @@
 set -e
 
 # Pull the Docker image from Docker Hub
+#docker pull amarnath001/simple-python-flask-app
 docker pull amarnath001/simple-python-flask-app
 
 # Run the Docker image as a container
