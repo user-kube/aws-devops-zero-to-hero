@@ -1,5 +1,9 @@
 #!/bin/bash
-set -e
+# Stop and remove the running container (if any)
+containerid=$(docker ps -q)
 
-# Stop the running container (if any)
-echo "Hi"
+if [ ! -z "$containerid" ]; then
+    docker rm -f $containerid
+else
+    echo "No running containers to stop."
+fi
